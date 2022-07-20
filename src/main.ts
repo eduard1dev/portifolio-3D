@@ -7,6 +7,8 @@ import Stats from 'stats-js';
 
 import { GUI } from 'lil-gui';
 
+import discImage from './textures/sprites/disc.png';
+
 let camera, scene, renderer, stats, material;
 let mouseX = 0,
   mouseY = 0;
@@ -32,9 +34,7 @@ function init() {
   const geometry = new THREE.BufferGeometry();
   const vertices = [];
 
-  const sprite = new THREE.TextureLoader().load(
-    'src/textures/sprites/disc.png',
-  );
+  const sprite = new THREE.TextureLoader().load(discImage);
 
   for (let i = 0; i < 10000; i++) {
     const x = 2000 * Math.random() - 1000;
